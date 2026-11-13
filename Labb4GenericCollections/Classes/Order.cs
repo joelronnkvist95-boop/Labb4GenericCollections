@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Xml.Linq;
 
 namespace Labb4GenericCollections.Classes
 {
@@ -19,6 +20,10 @@ namespace Labb4GenericCollections.Classes
             orderIdCounter++;
             _orderItems = orderItems;
             _tableNumber = tableNumber;
+        }
+        public override string ToString()
+        {
+            return $"Order ID:{_orderId}\n Table number: {_tableNumber}\n Order items: {_orderItems}";
         }
     }
 }
