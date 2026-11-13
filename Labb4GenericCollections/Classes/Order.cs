@@ -21,9 +21,15 @@ namespace Labb4GenericCollections.Classes
             _orderItems = orderItems;
             _tableNumber = tableNumber;
         }
+        //Här skapar jag en metod för att skriva ut Order
         public override string ToString()
         {
-            return $"Order ID:{_orderId}\n Table number: {_tableNumber}\n Order items: {_orderItems}";
+            string menuOrder = "";
+            foreach(MenuItem m in _orderItems)
+            {
+                menuOrder += m.ToString();
+            }
+            return $"Order ID:{_orderId}\n Table number: {_tableNumber}\n Order items: {menuOrder}"  ;
         }
     }
 }
