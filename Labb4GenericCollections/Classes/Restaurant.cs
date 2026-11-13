@@ -16,9 +16,11 @@ namespace Labb4GenericCollections.Classes
         }
         public void ShowMenu()
         {
+            Console.WriteLine("Meny:");
             int menuCount = 1;
             foreach(MenuItem m in menu)
             {
+                
                 Console.WriteLine($"{menuCount}: {m}");
                 menuCount++;
             }
